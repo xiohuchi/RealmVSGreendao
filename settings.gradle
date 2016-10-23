@@ -1,0 +1,1 @@
+include ':GreendaoExample', ':RealmExample', ':daogenerator', ':app'
