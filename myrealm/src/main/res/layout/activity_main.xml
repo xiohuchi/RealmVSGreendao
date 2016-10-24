@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="6">
+
+        <Button
+            android:id="@+id/btn_addData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="插入数据" />
+
+        <Button
+            android:id="@+id/btn_delectData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除数据" />
+
+        <Button
+            android:id="@+id/btn_selectData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询数据" />
+
+        <Button
+            android:id="@+id/btn_addList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="插入十万組数据" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

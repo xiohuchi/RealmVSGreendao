@@ -1,4 +1,4 @@
-package com.realm.app;
+package com.realm;
 
 import android.app.Application;
 import android.content.Context;

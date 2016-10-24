@@ -1,6 +1,5 @@
-package com.realm.app;
+package com.realm;
 
-import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -16,6 +15,9 @@ public class User extends RealmObject {
     private String email;
     private String phoneNumber;
     private String description;
+
+    public User() {
+    }
 
     public User(Long id, String name, String passWord, String email, String phoneNumber, String description) {
         this.id = id;

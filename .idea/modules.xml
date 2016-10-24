@@ -3,10 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GreendaoExample/GreendaoExample.iml" filepath="$PROJECT_DIR$/GreendaoExample/GreendaoExample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/RealmExample/realmexample.iml" filepath="$PROJECT_DIR$/RealmExample/realmexample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/RealmPKGreendao.iml" filepath="$PROJECT_DIR$/RealmPKGreendao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RealmExample/RealmExample.iml" filepath="$PROJECT_DIR$/RealmExample/RealmExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RealmVSGreendao.iml" filepath="$PROJECT_DIR$/RealmVSGreendao.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/daogenerator/daogenerator.iml" filepath="$PROJECT_DIR$/daogenerator/daogenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myrealm/myrealm.iml" filepath="$PROJECT_DIR$/myrealm/myrealm.iml" />
     </modules>
   </component>
 </project>

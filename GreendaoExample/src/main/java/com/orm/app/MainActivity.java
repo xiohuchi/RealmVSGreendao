@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_addList:
                 List<User> userList = new ArrayList<>();
-                for (int i = 0; i < 100000; i++) {
+                for (int i = 0; i < 300000; i++) {
                     //Long id, String name, String passWord, String email, String phoneNumber, String description
                     userList.add(new User(null, "name" + i, "passWord" + i, "email" + i, "phoneNumber" + i, "description" + i));
                 }

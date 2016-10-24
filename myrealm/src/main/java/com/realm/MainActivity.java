@@ -1,22 +1,18 @@
-package com.realm.app;
+package com.realm;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.realm.app.repositories.UserRepository;
+import com.realm.repositories.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_addList:
                 List<User> userList = new ArrayList<>();
-                for (int i = 0; i < 100000; i++) {
+                for (int i = 0; i < 300000; i++) {
                     //Long id, String name, String passWord, String email, String phoneNumber, String description
                     userList.add(new User(null, "name" + i, "passWord" + i, "email" + i, "phoneNumber" + i, "description" + i));
                 }
