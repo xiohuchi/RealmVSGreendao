@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import greendao.User;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.tv_content)
     TextView tvContent;
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
     }
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_addData:
                 break;
             case R.id.btn_delectData:
-                UserRepository.clearUseres(this);
+                UserRepository.clearUseres();
                 break;
             case R.id.btn_selectData:
                 break;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     //Long id, String name, String passWord, String email, String phoneNumber, String description
                     userList.add(new User(null, "name" + i, "passWord" + i, "email" + i, "phoneNumber" + i, "description" + i));
                 }
-                UserRepository.insertuserList(this, userList);
+                UserRepository.insertuserList(userList);
                 break;
         }
     }

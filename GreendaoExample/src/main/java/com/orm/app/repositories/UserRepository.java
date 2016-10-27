@@ -1,6 +1,5 @@
 package com.orm.app.repositories;
 
-import android.content.Context;
 import android.util.Log;
 
 import com.orm.app.App;
@@ -16,37 +15,37 @@ import greendao.UserDao;
 
 public class UserRepository {
 
-    public static void insertuserList(Context context, List<User> userList) {
+    public static void insertuserList(List<User> userList) {
         long time = System.currentTimeMillis();
-        getUserDao(context).insertOrReplaceInTx(userList);
+        getUserDao().insertOrReplaceInTx(userList);
         Log.d("UserRepository", "添加列表数据的时间=" + (System.currentTimeMillis() - time));
     }
 
-    public static void insertOrUpdate(Context context, User user) {
+    public static void insertOrUpdate(User user) {
         long time = System.currentTimeMillis();
-        getUserDao(context).insertOrReplace(user);
+        getUserDao().insertOrReplace(user);
         Log.d("UserRepository", "添加or修改数据的时间=" + (System.currentTimeMillis() - time));
     }
 
-    public static void clearUseres(Context context) {
+    public static void clearUseres() {
         long time = System.currentTimeMillis();
-        getUserDao(context).deleteAll();
+        getUserDao().deleteAll();
         Log.d("UserRepository", "清除数据的时间=" + (System.currentTimeMillis() - time));
     }
 
-    public static void deleteUserWithId(Context context, long id) {
-        getUserDao(context).delete(getUserForId(context, id));
+    public static void deleteUserWithId(long id) {
+        getUserDao().delete(getUserForId(id));
     }
 
-    public static User getUserForId(Context context, long id) {
-        return getUserDao(context).load(id);
+    public static User getUserForId(long id) {
+        return getUserDao().load(id);
     }
 
-    public static List<User> getAllUseres(Context context) {
-        return getUserDao(context).loadAll();
+    public static List<User> getAllUseres() {
+        return getUserDao().loadAll();
     }
 
-    private static UserDao getUserDao(Context c) {
-        return ((App) c.getApplicationContext()).getDaoSession().getUserDao();
+    private static UserDao getUserDao() {
+        return App.getDaoInstant().getUserDao();
     }
 }

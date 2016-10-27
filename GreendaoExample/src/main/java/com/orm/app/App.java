@@ -11,8 +11,7 @@ import greendao.DaoSession;
  */
 
 public class App extends Application {
-
-    private DaoSession daoSession;
+    private static DaoSession daoSession;
 
     @Override
     public void onCreate() {
@@ -27,7 +26,7 @@ public class App extends Application {
         daoSession = daoMaster.newSession();
     }
 
-    public DaoSession getDaoSession() {
+    public static DaoSession getDaoInstant() {
         return daoSession;
     }
 }
